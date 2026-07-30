@@ -1,0 +1,21 @@
+﻿'use client';
+import React from 'react';
+import Card, { CardHeader, CardTitle } from '@/components/ui/Card';
+import { Trash2 } from 'lucide-react';
+export default function Page() {
+  return (
+    <div className="space-y-6">
+      <div>
+        <h1 className="page-title">Hapus Data Kehadiran</h1>
+        <p className="page-subtitle">Hapus data kehadiran</p>
+      </div>
+      <Card>
+        <CardHeader><CardTitle>Hapus Data Kehadiran</CardTitle></CardHeader>
+        <div className="p-6 text-center text-gray-500">
+          <Trash2 className="w-12 h-12 mx-auto mb-3 text-gray-300" />
+          <p>Fitur akan segera tersedia</p>
+        </div>
+      </Card>
+    </div>
+  );
+}

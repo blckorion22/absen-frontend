@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="40" fill="#059669"/>
+  <path d="M100 30L170 70V130L100 170L30 130V70L100 30Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="4"/>
+  <path d="M100 50L155 80V120L100 150L45 120V80L100 50Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="3"/>
+  <path d="M100 70L140 90V110L100 130L60 110V90L100 70Z" fill="white" opacity="0.9"/>
+  <text x="100" y="108" text-anchor="middle" font-size="28" font-weight="bold" fill="#059669" font-family="Arial">MTs</text>
+  <circle cx="100" cy="170" r="10" fill="white" opacity="0.8"/>
+  <path d="M96 170L98 167L102 172L104 168" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
