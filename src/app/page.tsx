@@ -11,10 +11,9 @@ export default function HomePage() {
   const [stats, setStats] = useState<any>(null);
 
   const slides = [
-    'https://assyafiiyah02.sch.id/absen/assets/images/dashboard-hero-building.jpeg',
-    'https://assyafiiyah02.sch.id/absen/assets/images/gallery/01.png',
-    'https://assyafiiyah02.sch.id/absen/assets/images/gallery/02.png',
-    'https://assyafiiyah02.sch.id/absen/assets/images/gallery/03.png'
+    'https://coesmed.unpar.ac.id/back/dashboard-hero-building.jpeg',
+    'https://coesmed.unpar.ac.id/back/01.png',
+    'https://coesmed.unpar.ac.id/back/02.png',
   ];
 
   useEffect(() => {
