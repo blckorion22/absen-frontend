@@ -23,7 +23,8 @@ export default function HomePage() {
 
     const fetchStats = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/public/stats');
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+        const res = await fetch(`${apiUrl}/public/stats`);
         const json = await res.json();
         if (json.success) {
           setStats(json.data);
