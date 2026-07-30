@@ -15,7 +15,7 @@ interface SlipData {
   salary: Salary;
 }
 
-export default function SlipGajiPage() {
+function SlipGajiContent() {
   const searchParams = useSearchParams();
   const idParam = searchParams.get('id');
   const [slipData, setSlipData] = useState<SlipData | null>(null);
@@ -250,5 +250,13 @@ export default function SlipGajiPage() {
         `}} />
       </div>
     </div>
+  );
+}
+
+export default function SlipGajiPage() {
+  return (
+    <React.Suspense fallback={<div className="p-6 text-center">Memuat data...</div>}>
+      <SlipGajiContent />
+    </React.Suspense>
   );
 }
