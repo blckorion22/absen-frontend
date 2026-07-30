@@ -8,6 +8,15 @@ interface Settings {
   school_description: string;
   school_logo: string | null;
   school_address: string;
+  school_email?: string;
+  school_phone?: string;
+  school_website?: string;
+  school_motto?: string;
+  jam_masuk?: string;
+  jam_masuk_threshold?: string;
+  jam_pulang?: string;
+  jam_pulang_end?: string;
+  [key: string]: any;
 }
 
 interface SettingsContextType {
