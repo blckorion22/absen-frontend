@@ -21,11 +21,8 @@ export default function PublicNavbar() {
     <header className="public-topbar">
       <div className="public-topbar-inner">
         <Link href="/" className="public-brand">
-          {settings.school_logo ? (
-            <img className="public-brand-logo" src={settings.school_logo} alt="Logo" />
-          ) : (
-            <div className="public-brand-logo flex items-center justify-center bg-emerald-100 rounded-2xl">
-              <School className="w-8 h-8 text-emerald-600" />
+          {<img className="public-brand-logo" src="https://coesmed.unpar.ac.id/back/logo-mtsn-1-nganjuk.png"
+  alt="Logo" />
             </div>
           )}
           <span>
