@@ -64,6 +64,7 @@ export interface Attendance {
 
 export interface DashboardStats {
   total_students: number;
+  total_teachers?: number;
   present_today: number;
   late_today: number;
   absent_today: number;
