@@ -149,7 +149,7 @@ export default function HomePage() {
         <footer className="public-footer">
           <div className="public-footer-bar">
             <div className="public-footer-safe">
-              <img className="public-footer-logo" src={stats?.school_logo || "https://assyafiiyah02.sch.id/absen/assets/images/logo.png"} alt="Logo Sekolah" />
+              <img className="public-footer-logo" src="https://coesmed.unpar.ac.id/back/logo-mtsn-1-nganjuk.png" alt="Logo Sekolah" />
               <div><strong>Sistem Absensi Aman & Terpercaya</strong><span>Data tersimpan aman dan terproteksi</span></div>
             </div>
             <div className="public-footer-copy">

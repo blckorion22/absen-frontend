@@ -205,11 +205,7 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
       {/* Brand area (hidden or adjust as needed, we'll keep it minimal) */}
       <div className="flex items-center gap-3 px-5 py-5 mb-2">
         <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 p-1">
-          {settings.school_logo ? (
-            <img src={settings.school_logo} alt="Logo" className="w-full h-full object-contain rounded-full" />
-          ) : (
-            <img src="https://assyafiiyah02.sch.id/absen/assets/images/logo.png" alt="Logo Sekolah" className="w-full h-full object-contain rounded-full" />
-          )}
+          <img src="https://coesmed.unpar.ac.id/back/logo-mtsn-1-nganjuk.png" alt="Logo MTsN 1 Nganjuk" className="w-full h-full object-contain rounded-full bg-white p-1" />
         </div>
         {!collapsed && (
           <div className="flex-1 min-w-0">

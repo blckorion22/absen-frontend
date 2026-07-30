@@ -21,10 +21,7 @@ export default function PublicNavbar() {
     <header className="public-topbar">
       <div className="public-topbar-inner">
         <Link href="/" className="public-brand">
-          {<img className="public-brand-logo" src="https://coesmed.unpar.ac.id/back/logo-mtsn-1-nganjuk.png"
-  alt="Logo" />
-            </div>
-          )}
+          <img className="public-brand-logo" src="https://coesmed.unpar.ac.id/back/logo-mtsn-1-nganjuk.png" alt="Logo" />
           <span>
             <span className="public-brand-title">{settings.school_name || 'SISWA ABSENSI'}</span>
             <span className="public-brand-sub">DASHBOARD PUBLIK ABSENSI DIGITAL SEKOLAH</span>
