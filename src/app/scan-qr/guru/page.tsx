@@ -152,8 +152,12 @@ export default function ScanQRGuruPage() {
       setLoading(false);
       setTimeout(() => {
         setResult(null);
-        if (html5QrCode.current && html5QrCode.current.getState() === 2) {
-          html5QrCode.current.resume();
+        if (html5QrCode.current) {
+          try {
+            html5QrCode.current.resume();
+          } catch (e) {
+            console.log("Already scanning or cannot resume", e);
+          }
         }
       }, 4000);
     }
