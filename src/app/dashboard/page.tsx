@@ -74,14 +74,17 @@ export default function DashboardPage() {
   const totalStudents = stats?.total_students ?? 0;
   // @ts-ignore
   const totalTeachers = stats?.total_teachers ?? 0;
-  const present = stats?.present_today || 70;
-  const late = stats?.late_today || 1;
-  const absent = stats?.absent_today || 0;
-  const belumAbsen = totalStudents - present - late - absent;
   
-  const presentPct = totalStudents > 0 ? ((present / totalStudents) * 100).toFixed(2) : '0.00';
-  const latePct = totalStudents > 0 ? ((late / totalStudents) * 100).toFixed(2) : '0.00';
-  const belumPct = totalStudents > 0 ? ((belumAbsen / totalStudents) * 100).toFixed(2) : '0.00';
+  const present = (stats?.present_today || 0) + (stats?.teacher_present_today || 0);
+  const late = (stats?.late_today || 0) + (stats?.teacher_late_today || 0);
+  const absent = (stats?.absent_today || 0) + (stats?.teacher_absent_today || 0);
+  
+  const totalAll = totalStudents + totalTeachers;
+  const belumAbsen = Math.max(0, totalAll - present - late - absent);
+  
+  const presentPct = totalAll > 0 ? ((present / totalAll) * 100).toFixed(2) : '0.00';
+  const latePct = totalAll > 0 ? ((late / totalAll) * 100).toFixed(2) : '0.00';
+  const belumPct = totalAll > 0 ? ((belumAbsen / totalAll) * 100).toFixed(2) : '0.00';
 
   const chartData = monthlyData.length > 0 ? monthlyData.map(d => ({
     date: new Date(d.date + 'T00:00:00').toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }),
@@ -509,7 +512,7 @@ export default function DashboardPage() {
           <div className="space-y-5">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                <Users className="w-5 h-5 text-slate-400"/> {belumAbsen} Siswa belum absensi
+                <Users className="w-5 h-5 text-slate-400"/> {belumAbsen} Siswa & Guru belum absen
               </div>
               <span className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1.5 rounded-md cursor-pointer hover:bg-amber-100 transition-colors">Lihat</span>
             </div>
