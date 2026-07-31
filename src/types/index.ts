@@ -69,6 +69,10 @@ export interface DashboardStats {
   late_today: number;
   absent_today: number;
   excused_today?: number;
+  teacher_present_today?: number;
+  teacher_late_today?: number;
+  teacher_absent_today?: number;
+  teacher_excused_today?: number;
   checked_in_today?: number;
   checked_out_today?: number;
   present_percentage?: number;
